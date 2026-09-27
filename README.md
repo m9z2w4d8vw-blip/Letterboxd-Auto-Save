@@ -75,16 +75,6 @@ ones by hand from the popup footer, and export everything as text or JSON any ti
 | `background.js` | prunes stale drafts, keeps the badge count |
 | `popup.html/.css/.js` | the drafts list |
 | `manifest.json` | MV3 manifest, `storage` + letterboxd.com host permission only |
-
-## Icon and colours
-
-The icon borrows Letterboxd's three-dot rhythm and its palette (`#ff8000`,
-`#00e054`, `#40bcf4`) but reads as an ellipsis — a sentence not finished yet —
-rather than reproducing their overlapping-circles mark. The third dot is left
-open: the one still being written. The same three colours carry state through
-the rest of the extension: orange for a draft that isn't posted, green for one
-that is, blue while a save is in flight.
-
 Deliberately not their actual logo. That mark is a trademark, so a companion
 extension shouldn't wear it — fine as a personal unpacked build either way, but
 it would be a problem in the Chrome Web Store, which rejects extensions using a
