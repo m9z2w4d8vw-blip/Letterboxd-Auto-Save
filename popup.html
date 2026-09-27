@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="titleline">
+      <h1>Saved drafts</h1>
+      <span class="count" id="count"></span>
+    </div>
+    <input id="search" type="search" placeholder="Search a film or a phrase" autocomplete="off" spellcheck="false">
+  </header>
+
+  <main id="list" class="list"></main>
+
+  <template id="row-tpl">
+    <article class="row">
+      <button class="rowhead" type="button">
+        <span class="line1">
+          <span class="rowtitle"></span>
+          <span class="when"></span>
+        </span>
+        <span class="line2"></span>
+        <span class="excerpt"></span>
+      </button>
+      <div class="detail" hidden>
+        <div class="meta"></div>
+        <div class="full"></div>
+        <div class="actions">
+          <button type="button" data-act="copy">Copy text</button>
+          <button type="button" data-act="open">Open page</button>
+          <span class="grow"></span>
+          <button type="button" class="danger" data-act="delete">Delete</button>
+        </div>
+        <div class="snaps"></div>
+      </div>
+    </article>
+  </template>
+
+  <footer class="bottom">
+    <label class="toggle">
+      <input type="checkbox" id="autoRestore">
+      <span>Put the draft back automatically when the box is empty</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" id="showPill">
+      <span>Show the saved marker on the review box</span>
+    </label>
+    <div class="footrow">
+      <button type="button" id="exportTxt" class="link">Export all as text</button>
+      <button type="button" id="exportJson" class="link">Export as JSON</button>
+      <span class="grow"></span>
+      <button type="button" id="clearPosted" class="link">Clear posted</button>
+    </div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
