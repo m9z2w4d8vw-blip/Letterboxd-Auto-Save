@@ -66,16 +66,3 @@ ones by hand from the popup footer, and export everything as text or JSON any ti
 - Letterboxd redesigns things. The field detection falls back to "any review-ish
   textarea in a diary form", so a rename of `#frm-review` shouldn't break it, but if
   drafts stop appearing in the popup, that's the first thing to check.
-
-## Files
-
-| file | what it does |
-| --- | --- |
-| `content.js` | the whole watcher: field detection, saving, restoring, in-page toast |
-| `background.js` | prunes stale drafts, keeps the badge count |
-| `popup.html/.css/.js` | the drafts list |
-| `manifest.json` | MV3 manifest, `storage` + letterboxd.com host permission only |
-Deliberately not their actual logo. That mark is a trademark, so a companion
-extension shouldn't wear it — fine as a personal unpacked build either way, but
-it would be a problem in the Chrome Web Store, which rejects extensions using a
-brand's marks in a way that implies the brand made them.
